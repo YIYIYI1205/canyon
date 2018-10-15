@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>canyon</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/team.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <style>
+  	.list{
+  		margin: 20px;
+  	}
+  	input{
+  		border: 1px solid #000;
+  	}
+	input[name='img'],input[name='img-f']{
+		border: 0px;
+	}
+  	.content{
+  		width: 800px;
+  		margin: 50px auto;
+  	}
+  	label{
+  		margin: 10px;
+  	}
+	.special{
+		margin-top: 20px;
+		margin-bottom: -10px;
+	}
+  </style>
+</head>
+<body>
+	<div class="head">
+      <img src="../images/logo.jpg" class="logo">
+      <div class="tab">
+          <ul>
+            <li><a href="#" id="Home" onclick="home()" class="hideQita">Home</a></li>
+            <li><a href="#" id="aboutUs" onclick="team()" class="hideQita">About us</a></li>
+            <li class="product_guide">
+              <a href="#" id="product">Prouducts</a>
+              <ul class="first_guide" style="display: none;">
+              </ul>
+            </li>
+            <li><a href="#" id="guest_book" class="hideQita" onclick="guest()">Guest book</a></li>
+            <li><a href="#" id="contact_us" class="hideQita" onclick="contact()">Contact us</a></li>
+            <li>
+              <a href="#" id="search" class="hideQita">Search</a>
+              <div class="search" style="display: none;">
+                <input type="text" class='input'>
+                <button class="searchSubmit">Search</button>
+                <button class="Close">Close</button>
+              </div>
+              
+            </li>
+          </ul>
+      </div>
+  	</div>
+	<div class="content">
+		<!-- <div class="input-group input-group-sm">
+        <div class="input-group-addon" id="sizing-addon3">ProductName</div>
+        <input type="text" class="form-control" placeholder="" aria-describedby="sizing-addon3" name="title">
+      	</div>
+      	<div class="input-group input-group-sm">
+        <div class="input-group-addon" id="sizing-addon3">Image</div>
+        <input type="file" class="form-control" placeholder="" aria-describedby="sizing-addon3" name="img">
+      	</div>
+      	<div class="input-group input-group-sm">
+        <div class="input-group-addon" id="sizing-addon3">ProductDescribe</div>
+        <input type="text" class="form-control" placeholder="" aria-describedby="sizing-addon3" name="describe">
+      	</div>
+      	<div class="input-group input-group-sm">
+        <div class="input-group-addon" id="sizing-addon3">Attached Image</div>
+        <input type="text" class="form-control" placeholder="" aria-describedby="sizing-addon3" name="img-f">
+      	</div>
+      	<div class="input-group input-group-sm">
+        <div class="input-group-addon" id="sizing-addon3">Product class I Catalog</div>
+        <input type="cheackbox" class="form-control" placeholder="" aria-describedby="sizing-addon3" name="typeFirst" value="hot">
+		
+      	</div> -->
+      	<div class="list">
+	        <div>ProductName</div>
+	        <input type="text" name="title">
+      	</div>
+      	<div class="list">
+	        <div>Image</div>
+	        <input type="file" name="img">
+      	</div>
+      	<div class="list">
+	        <div>ProductDescribe</div>
+	        <input type="text" name="describe">
+      	</div>
+      	<div class="list">
+	        <div>Attached Image</div>
+	        <input type="file" name="img-f">
+      	</div>
+      	<div class="list">
+      		<div>Product class I Catalog</div>
+	      	<div class="dongtai">
+	        	
+			</div>
+			<button class="addFirst">add class I Catalog</button>
+			<input type="text" name="addFirst" style="display: none;">
+			<div class="special">Product class II Catalog</div>
+      	</div>
+      	<div class="list">
+      		<div class="dongtaier">     	
+			</div>
+			<button class="addSecond">add class II Catalog</button>
+			<input type="text" name="addSecond" style="display: none;">
+      	</div>
+      	<button class="submit">submit</button>
+
+
+  <div class="contact">
+      <div>
+       <span>No.2-3 BAIYU MOUNTAIN VILLA, JIAOJIANG, TAIZHOU, ZHEJIANG, CHINA, 318000</span>
+      </div>
+      <div>
+        <span>sophiecym@163.com</span>
+      </div>
+      <div>
+        <span>0086-1357594770</span>
+      </div>
+    </div>      
+<script src="../js/jquery.js"></script>
+<script src="../bootstrap/js/bootstrap.js"></script>    
+<script src="../js/index.js"></script>
+<script src="../js/add.js"></script>
+</body>
+</html>

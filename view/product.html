@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>canyon</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/product.css">
+  <link rel="stylesheet" href="../css/common.css">
+</head>
+<body>
+	<div class="head">
+      <img src="../images/logo.jpg" class="logo">
+      <div class="tab">
+          <ul>
+            <li><a href="#" id="Home" onclick="home()" class="hideQita">Home</a></li>
+            <li><a href="#" id="aboutUs" onclick="team()" class="hideQita">About us</a></li>
+            <li class="product_guide">
+              <a href="#" id="product">Prouducts</a>
+              <ul class="first_guide" style="display: none;">
+              <!-- <ul class="first_guide"> -->
+                <!-- <li class="qita yiji" onclick="product('hot')">hot</li>
+                <li class="relative_guide beach yiji" onclick="product('beach_shorts')">
+                  beach shorts
+                  <ul class="second_guide beach_shorts_guide" style="display: none;">
+                    <li class="erji" onclick="product('men')">men's shorts</li>
+                    <li class="erji" onclick="product('women')">women's shorts</li>
+                    <li class="erji" onclick="product('kids')">kids shorts</li>
+                  </ul>
+                </li>
+                <li class="relative_guide sports yiji" onclick="product('sports_wears')">
+                  sports wears
+                  <ul  class="second_guide sports_wears_guide" style="display: none;">
+                    <li class="erji" onclick="product('MMA')">MMA shorts</li>
+                    <li class="erji" onclick="product('boxing')">boxing shorts</li>
+                    <li class="erji" onclick="product('track')">track suits</li>
+                    <li class="erji" onclick="product('TKD')">TKD uniform</li>
+                    <li class="erji" onclick="product('compressions')">compressions</li>
+                  </ul>
+                </li>
+                <li class="qita yiji" onclick="product('pants')">pants</li>
+                <li class="qita yiji" onclick="product('swimming_wears')">swimming wears</li>
+                <li class="qita yiji" onclick="product('knit_wears')">knit wears</li>
+                <li class="qita yiji" onclick="product('others')">others</li> -->
+              </ul>
+            </li>
+            <li><a href="#" id="guest_book" class="hideQita" onclick="guest()">Guest book</a></li>
+            <li><a href="#" id="contact_us" class="hideQita" onclick="contact()">Contact us</a></li>
+            <li>
+              <a href="#" id="search" class="hideQita">Search</a>
+              <div class="search" style="display: none;">
+                <input type="text" class='input'>
+                <button class="searchSubmit">Search</button>
+                <button class="Close">Close</button>
+              </div>
+              
+            </li>
+          </ul>
+      </div>
+  </div>
+	<div class="product">
+      <div class="left">
+        <span class="one">Product class I Catalog</span>
+        <div class="first">
+            <!-- <a href="#" id="hot">hot</a>
+            <a href="#" id="beach_shorts">beach shorts</a>
+            <a href="#" id="sports_wears">sports wears</a>
+            <a href="#" id="pants">pants</a>
+            <a href="#" id="swimming_wears">swimming wears</a>
+            <a href="#" id="knit_wears">knit wears</a>
+            <a href="#" id="others">others</a> -->
+        </div>
+        <span class="two">Product class II Catalog</span>
+        <div class="second">
+            <!-- <div class="beach_shorts men_shorts women_shorts kids_shorts" style="display: none;">
+            <a href="#" id="beach_all">all</a>
+            <a href="#" id="men_shorts">men's shorts</a>
+
+            <a href="#" id="women_shorts">women's shorts</a>
+    
+            <a href="#" id="kids_shorts">kids shorts</a>
+        </div>
+        <div class="sports_wears MMA_shorts boxing_shorts track_suits TKD_uniform compressions" style="display: none;">
+            <a href="#" >all</a>
+            <a href="#" id="MMA_shorts">MMA shorts</a>
+  
+            <a href="#" id="boxing_shorts">boxing shorts</a>
+  
+            <a href="#" id="track_suits">track suits</a>
+
+            <a href="#" id="TKD_uniform">TKD uniform</a>
+
+            <a href="#" id="compressions">compressions</a>
+        </div> -->  
+        </div>
+        
+      </div>  
+      <div class="right">
+        <div class="hot all hot_add" style="display: none;">
+        </div>
+        <div class="beach_shorts all beach_shorts_add" style="display: none;">
+        </div>
+        <div class="men_shorts all men_shorts_add" style="display: none;">
+        </div>
+        <div class="women_shorts all women_shorts_add" style="display: none;">
+        </div>
+        <div class="kids_shorts all kids_shorts_add" style="display: none;">
+        </div>
+        <div class="sports_wears all sports_wears_add" style="display: none;">
+        </div>
+        <div class="MMA_shorts all MMA_shorts_add" style="display: none;">
+        </div>
+        <div class="boxing_shorts all boxing_shorts_add" style="display: none;">
+        </div>
+        <div class="track_suits all track_suits_add" style="display: none;">
+        </div>
+        <div class="TKD_uniform all TKD_uniform_add" style="display: none;">
+        </div>
+        <div class="compressions all compressions_add" style="display: none;">
+        </div>
+        <div class="pants all pants_add" style="display: none;">
+        </div>
+          <div class="swimming_wears all swimming_wears_add" style="display: none;">
+          </div>
+        <div class="knit_wears all knit_wears_add" style="display: none;">
+        </div>
+        <div class="others all others_add" style="display: none;">
+        </div>
+      </div>
+  </div>
+  
+
+
+
+
+
+
+
+    <div class="contact">
+      <div>
+       <span>No.2-3 BAIYU MOUNTAIN VILLA, JIAOJIANG, TAIZHOU, ZHEJIANG, CHINA, 318000</span>
+      </div>
+      <div>
+        <span>sophiecym@163.com</span>
+      </div>
+      <div>
+        <span>0086-1357594770</span>
+      </div>
+    </div>
+    </div>
+    <!-- <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script> -->
+    <script src="../js/jquery.js"></script>
+    <script src="../bootstrap/js/bootstrap.js"></script>
+    <script src="../js/product.js"></script>
+    <script src="../js/index.js"></script>
+</body>
+</html>

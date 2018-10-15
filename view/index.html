@@ -1,0 +1,219 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>canyon</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="../css/common.css">
+</head>
+<body>
+  <div class="all">
+    <div class="head">
+      <img src="../images/logo.jpg" class="logo">
+      <div class="tab">
+          <ul>
+            <li><a href="#" id="Home" onclick="home()" class="hideQita">Home</a></li>
+            <li><a href="#" id="aboutUs" onclick="team()" class="hideQita">About us</a></li>
+            <li class="product_guide">
+              <a href="#" id="product">Prouducts</a>
+              <ul class="first_guide" style="display: none;">
+              <!-- <ul class="first_guide"> -->
+                <!-- <li class="qita yiji" onclick="product('hot')">hot</li>
+                <li class="relative_guide beach yiji" onclick="product('beach_shorts')">
+                  beach shorts
+                  <ul class="second_guide beach_shorts_guide" style="display: none;">
+                    <li class="erji" onclick="product('men')">men's shorts</li>
+                    <li class="erji" onclick="product('women')">women's shorts</li>
+                    <li class="erji" onclick="product('kids')">kids shorts</li>
+                  </ul>
+                </li>
+                <li class="relative_guide sports yiji" onclick="product('sports_wears')">
+                  sports wears
+                  <ul  class="second_guide sports_wears_guide" style="display: none;">
+                    <li class="erji" onclick="product('MMA')">MMA shorts</li>
+                    <li class="erji" onclick="product('boxing')">boxing shorts</li>
+                    <li class="erji" onclick="product('track')">track suits</li>
+                    <li class="erji" onclick="product('TKD')">TKD uniform</li>
+                    <li class="erji" onclick="product('compressions')">compressions</li>
+                  </ul>
+                </li>
+                <li class="qita yiji" onclick="product('pants')">pants</li>
+                <li class="qita yiji" onclick="product('swimming_wears')">swimming wears</li>
+                <li class="qita yiji" onclick="product('knit_wears')">knit wears</li>
+                <li class="qita yiji" onclick="product('others')">others</li> -->
+              </ul>
+            </li>
+            <li><a href="#" id="guest_book" class="hideQita" onclick="guest()">Guest book</a></li>
+            <li><a href="#" id="contact_us" class="hideQita" onclick="contact()">Contact us</a></li>
+            <li>
+              <a href="#" id="search" class="hideQita">Search</a>
+              <div class="search" style="display: none;">
+                <input type="text" class='input'>
+                <button class="searchSubmit">Search</button>
+                <button class="Close">Close</button>
+              </div>
+              
+            </li>
+          </ul>
+      </div>
+    </div>
+	 <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+        <li data-target="#myCarousel" data-slide-to="4"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <div class="item active position_relative">
+          <img class="first-slide" src="../images/1.jpg" alt="First slide">
+            <div class="img">
+              <img src="../images/logo1.jpg" alt="">
+            </div>
+        </div>
+        <div class="item">
+          <img class="second-slide" src="../images/2.jpg" alt="Second slide">
+          <div class="container">
+            <div class="carousel-caption">
+              
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img class="third-slide" src="../images/3.jpg" alt="Third slide">
+          <div class="container">
+            <div class="carousel-caption">
+            
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img class="fourth-slide" src="../images/4.jpg" alt="Fourth slide">
+          <div class="container">
+            <div class="carousel-caption">
+              
+            </div>
+          </div>
+        </div>
+        <div class="item position_relative">
+          <img class="fifth-slide" src="../images/5.jpg" alt="Fifth slide">
+      
+            <div class="postion">
+              <h1>WHAT WE CAN</h1>
+            </div>
+        
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div><!-- /.carousel -->
+    
+    <div class="team" onclick="team()">
+      <div class="border"></div>
+      <div class="left">
+        <h1>COMPANY PROFILE</h1>
+        <div>Professionals create new beautiful life</div>  
+      </div>
+      <div class="right">
+        <img src="../images/1.jpg">
+      </div>  
+    </div>
+    <div class="product">
+      <h1>OUR PRODUCTS</h1>
+      <div class="detail" onclick="product('hot')">
+        <div class="left">
+          <h2>hot</h2>
+        </div>
+        <div class="right">
+          <img src="../images/hot/1.jpg">
+        </div>
+      </div>
+      <div class="detail" onclick="product('beach_shorts')">
+        <div class="left">
+          <img src="../images/women/34.jpg">
+        </div>
+        <div class="right">
+          <h2>beach shorts</h2>
+        </div>
+      </div>
+      <div class="detail" onclick="product('sports_wears')">
+        <div class="left">
+          <h2>sports wears</h2>
+        </div>
+        <div class="right">
+          <img src="../images/mma/49.jpg">
+        </div>
+      </div>  
+      <div class="detail" onclick="product('pants')">  
+        <div class="left">
+          <img src="../images/pants/180.jpg">
+        </div>
+        <div class="right">
+          <h2>pants</h2>
+        </div>
+      </div>
+      <div class="detail" onclick="product('swimming_wears')">
+        <div class="left">
+           <h2>swimming wears</h2>
+        </div>
+        <div class="right">
+          <img src="../images/swimming/168.jpg">
+        </div>  
+      </div>
+      <div class="detail" onclick="product('knit_wears')">
+        <div class="left">
+          <img src="../images/knit/188.jpg">
+        </div>
+        <div class="right">
+          <h2>knit wears</h2>
+        </div>
+      </div>
+      <div class="detail" onclick="product('others')">  
+        <div class="left">
+          <h2>others</h2>
+        </div>
+        <div class="right">
+          <img src="../images/others/200.jpg">
+        </div>
+      </div>
+    </div>
+    <div class="contact">
+      <div>
+       <span>No.2-3 BAIYU MOUNTAIN VILLA, JIAOJIANG, TAIZHOU, ZHEJIANG, CHINA, 318000</span>
+      </div>
+      <div>
+        <span>sophiecym@163.com</span>
+      </div>
+      <div>
+        <span>0086-1357594770</span>
+      </div>
+    </div>
+  </div>
+
+<!-- 	<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+  <script src="../js/jquery.js"></script>
+  <script src="../bootstrap/js/bootstrap.js"></script>
+  <script src="../js/index.js"></script>
+	<script>
+		$(function(){
+			$('.carousel').carousel({
+  				interval: 2000
+			})
+		})   
+	</script>
+</body>
+</html>

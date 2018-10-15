@@ -1,0 +1,106 @@
+
+ul,li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	color:#000;
+}
+a:hover{
+	color:red;
+}
+a:active{
+	text-decoration: none;
+}
+.head{
+	display: flex;
+	justify-content: space-between;
+	padding: 10px 20px;
+	background: #000;
+	color:#fff;
+	.logo{
+		width: 100px;
+		height: 50px;
+	}
+	.tab ul{
+		display: flex;
+		li{
+			margin: 20px 40px 0 40px;
+			font-size: 10px;
+			a{
+				color:#fff;
+			}
+			a:hover{
+				color: #27aae0;
+			}
+		}
+	}
+}
+.contact{
+	margin-top: 30px;
+	background: #000;
+	color: #fff;
+	font-size:18px;
+	text-align:center;
+	padding: 20px 0;
+	span{
+		margin-left:50px;
+	}
+}
+.product_guide{
+    position: relative;
+}
+.relative_guide{
+    position: relative;
+}
+.first_guide{
+    background: black;
+    position: absolute;
+    top:30px;
+    left: -56px;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+}
+.second_guide{
+    border-left: 1px solid #5a6268;
+    padding-right: 37px;
+    text-align: center;
+    background: black;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+}
+.first_guide,.second_guide{
+    padding-top: 4px;
+    padding-bottom: 20px;
+}
+
+.first_guide li,.second_guide li{
+    width: 100px;
+}
+.second_guide{
+	left: 140px;
+    padding: 4px 5px 20px 5px;
+	top:-20px;
+}
+.active_guide{
+    color: #337ab7;
+}
+.erji{
+	color:white;
+}
+#search{
+	position: relative;
+}
+.search{
+	input{
+		border: 1px solid #000;
+	}
+	position: absolute;
+	top: 76px;
+	right: 20px;
+	z-index: 10;
+	color:black;
+}
