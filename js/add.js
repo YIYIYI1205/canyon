@@ -1,41 +1,41 @@
 $(function(){
-	var url="../api/guide.php";
-    $.get(url,function(res){
-        var str=res.split("{}")[0];
-        str=str.slice(1,str.length-1);
-        str=$.parseJSON(str);
-        console.log(str);
-        var first=str.first;
-        var second=str.second;
-        for(var i=0;i<first.length;i++){
-            var content=$('<input type="radio" name="typeFirst" value="'+first[i]+'"><label>'+first[i]+'</label>')
-            $(".dongtai").append(content);
-        }
+	
+    // $.get(url,function(res){
+    //     var str=res.split("{}")[0];
+    //     str=str.slice(1,str.length-1);
+    //     str=$.parseJSON(str);
+    //     // console.log(str);
+    //     var first=str.first;
+    //     var second=str.second;
+    //     for(var i=0;i<first.length;i++){
+    //         var content=$('<input type="radio" name="typeFirst" value="'+first[i]+'"><label>'+first[i]+'</label>')
+    //         $(".dongtai").append(content);
+    //     }
         
-        $("input[name='typeFirst']").click(function(){
-        	var typeFirst=$(this).val();
-        	console.log(typeFirst); 
-        	$(".dongtaier").empty();
-        	for(var i=0;i<second.length;i++){
-	            // if(typeFirst==second[i][0]){
-	            //     for(var j=1;j<second[i].length;j++){
-	            //     	var content_second=$('<input type="radio" name="typeSecond" value="'+second[i][j]+'"><label>'+second[i][j]+'</label>');
-	            //     	$(".dongtaier").append(content);
-	            //     }
-	            // }
-	            console.log(second[i][0])
-	            if(typeFirst==second[i][0]){
-	            	for(var j=1;j<second[i].length;j++){
-	            		console.log(second[i][j]);
-	            		var content_second=$('<input type="radio" name="typeSecond" value="'+second[i][j]+'"><label>'+second[i][j]+'</label>');
-	            		$(".dongtaier").append(content_second);
-	            	}	
-	            	break;
-	            }
+    //     $("input[name='typeFirst']").click(function(){
+    //     	var typeFirst=$(this).val();
+    //     	// console.log(typeFirst); 
+    //     	$(".dongtaier").empty();
+    //     	for(var i=0;i<second.length;i++){
+	   //          // if(typeFirst==second[i][0]){
+	   //          //     for(var j=1;j<second[i].length;j++){
+	   //          //     	var content_second=$('<input type="radio" name="typeSecond" value="'+second[i][j]+'"><label>'+second[i][j]+'</label>');
+	   //          //     	$(".dongtaier").append(content);
+	   //          //     }
+	   //          // }
+	   //          // console.log(second[i][0])
+	   //          if(typeFirst==second[i][0]){
+	   //          	for(var j=1;j<second[i].length;j++){
+	   //          		// console.log(second[i][j]);
+	   //          		var content_second=$('<input type="radio" name="typeSecond" value="'+second[i][j]+'"><label>'+second[i][j]+'</label>');
+	   //          		$(".dongtaier").append(content_second);
+	   //          	}	
+	   //          	break;
+	   //          }
 	            
-        	}      
-        })        
-    })
+    //     	}      
+    //     })        
+    // })
     $(".addFirst").click(function(){
     	$(":radio").val("");
     	$(":radio").attr("disabled","disabled");
@@ -46,7 +46,7 @@ $(function(){
     	$(":radio").attr("disabled","disabled");
     	$("input[name='addSecond']").show();
     })
-    var img="";
+    		var img_main="";
     		$('input[name="img"]').on('change', function (event) {
                 var files = event.target.files;
 	                for (var i = 0, len = files.length; i < len; i++) {
@@ -54,7 +54,7 @@ $(function(){
 	                    var reader = new FileReader();
 	                    reader.onload = function (e) {
 	                        var img = new Image();
-	                        img.src = e.target.result;         
+	                        img.src = e.target.result;        
 	                        img.onload = function () {  
 	                            // 不要超出最大宽度  
 	                            var w = Math.min(10000, img.width);  
@@ -70,9 +70,11 @@ $(function(){
 	                            var base64 = canvas.toDataURL('image/jpeg',0.6);  
 	  
 
-	                            img=img+base64;                       
+	                            img_main=img_main+base64; 
+	                            // console.log(img_main);                      
 	                        }
 	                    };
+
                     reader.readAsDataURL(file);
                 }
             }); 
@@ -108,18 +110,28 @@ $(function(){
     $(".submit").click(function(){
     	var title=$("input[name='title']").val();
     	var describe=$("input[name='describe']").val();
-    	var typeFirst=$("input[name='typeFirst']").val();
-    	var typeSecond=$("input[name='typeSecond']").val();
+    	var typeFirst=$("input[name='typeFirst']:checked").val();
+    	var typeSecond=$("input[name='typeSecond']:checked").val();
     	var addFirst=$("input[name='addFirst']").val();
     	var addSecond=$("input[name='addSecond']").val();
-    	console.log(title);
-    	console.log(describe);
-    	console.log(typeFirst);
-    	console.log(typeSecond);
-    	console.log(addFirst);
-    	console.log(addSecond);
-    	console.log(img);
-    	//有点问题
-    	console.log(img_f);
+    	var datas={
+    		title:title,
+    		describe:describe,
+    		typeFirst:typeFirst,
+    		typeSecond:typeSecond,
+    		addFirst:addFirst,
+    		addSecond:addSecond,
+    		img:img_main,
+    		img_f:img_f
+    	}
+        console.log(datas);
+        var url="http://106.12.7.86/submitProduct";
+    	$.post(url,datas).then(function(res){
+            console.log(res);
+            alert("Add product successfully!");
+        },function(res){
+            alert("Add product failed！");
+        })
+
     })
 })

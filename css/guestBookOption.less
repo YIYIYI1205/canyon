@@ -2,15 +2,18 @@
 	width: 80%;
 	margin: 20px auto;
 	text-align:center;
-	.tatle{
+	.title{
 		padding: 10px 0;
 		display: flex;
 		border: 1px solid #ccc;
 		.one{
-			flex: 8;
+			flex: 5;
 			
 		}
 		.two{
+			flex: 1;
+		}
+		.three{
 			flex: 1;
 		}
 	}
@@ -20,16 +23,20 @@
 		border: 1px solid #ccc;
 		display: flex;
 		.list{
-			flex: 8;
+			flex: 5;
 			
 		}
 		.option{
 			flex: 1;
 			display: flex;
-			flex-direction: row;
 			button{
-				margin: 0 10px;
+				flex: 1;
+				margin: 0 20px;
+				border: 1px solid #ccc;
 			}
+		}
+		.state{
+			flex:1;
 		}
 	}
 }

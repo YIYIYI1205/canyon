@@ -2,7 +2,7 @@
 
 	$items=array(
 
-				array("first"=>array("hot","beach shorts","sports wears","pants","swimming wears","knit wears","others"),
+				array("first"=>array("beach shorts","sports wears","pants","swimming wears","knit wears","others"),
 						"second"=>array(array("beach shorts","men's shorts","women's shorts","kids shorts"),
 										array("sports wears","MMA shorts","boxing shorts","track suits","TKD uniform","compressions")
 									),

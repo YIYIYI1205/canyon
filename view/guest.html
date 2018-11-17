@@ -7,6 +7,7 @@
     <!-- <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/pagination.css">
     <style>
         .content{
             width: 80%;
@@ -33,6 +34,7 @@
             <li class="product_guide">
               <a href="#" id="product">Prouducts</a>
               <ul class="first_guide" style="display: none;">
+                <li class="qita yiji hot" onclick="product('hot')">hot</li>
               <!-- <ul class="first_guide"> -->
                 <!-- <li class="qita yiji" onclick="product('hot')">hot</li>
                 <li class="relative_guide beach yiji" onclick="product('beach_shorts')">
@@ -75,18 +77,17 @@
     </div>
 <div class="content">
     <div class="guest">
-        <ul>
-            <li>hklaskjdfhlaksjdhlfkasjdfasdfa</li>
-            <li>hklaskjdfhlaksjdhlfkasjdfasdfa</li>
-            <li>hklaskjdfhlaksjdhlfkasjdfasdfa</li>
-            <li>hklaskjdfhlaksjdhlfkasjdfasdfa</li>
-            <li>hklaskjdfhlaksjdhlfkasjdfasdfa</li>
-            <li>hklaskjdfhlaksjdhlfkasjdfasdfa</li>
-            <li>hklaskjdfhlaksjdhlfkasjdfasdfa</li>
-        </ul>
-    </div>
+      <div class="noData" style="margin-top: 180px;display: none;">
+        <h2>no data</h2>
+      </div>
+      <ul class="guestList">
+            
+      </ul>
+      <div class="ht-page">
+      </div>
+    </div>  
     <textarea name="" id="" cols="100" rows="10"></textarea>
-    <button>submit</button>
+    <button id="submit">submit</button>
 </div>
 <div class="contact">
     <div>
@@ -100,7 +101,9 @@
     </div>
 </div>
   <script src="../js/jquery.js"></script>
+  <script src="../js/pagination.js"></script>
   <script src="../bootstrap/js/bootstrap.js"></script>
 <script src="../js/index.js"></script>
+<script src="../js/guest.js"></script>
 </body>
 </html>
