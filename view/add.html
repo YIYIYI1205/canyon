@@ -28,6 +28,22 @@
 		margin-top: 20px;
 		margin-bottom: -10px;
 	}
+  .content{
+    position: relative;
+  }
+  .uploading{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    background: black;
+    color: white;
+    width: 140px;
+    font-size: 20px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 10px;
+  }
   </style>
 </head>
 <body>
@@ -40,7 +56,6 @@
             <li class="product_guide">
               <a href="#" id="product">Prouducts</a>
               <ul class="first_guide" style="display: none;">
-                <li class="qita yiji hot" onclick="product('hot')">hot</li>
               </ul>
             </li>
             <li><a href="#" id="guest_book" class="hideQita" onclick="guest()">Guest book</a></li>
@@ -52,33 +67,11 @@
                 <button class="searchSubmit">Search</button>
                 <button class="Close">Close</button>
               </div>
-              
             </li>
           </ul>
       </div>
-  	</div>
+  </div>
 	<div class="content">
-		<!-- <div class="input-group input-group-sm">
-        <div class="input-group-addon" id="sizing-addon3">ProductName</div>
-        <input type="text" class="form-control" placeholder="" aria-describedby="sizing-addon3" name="title">
-      	</div>
-      	<div class="input-group input-group-sm">
-        <div class="input-group-addon" id="sizing-addon3">Image</div>
-        <input type="file" class="form-control" placeholder="" aria-describedby="sizing-addon3" name="img">
-      	</div>
-      	<div class="input-group input-group-sm">
-        <div class="input-group-addon" id="sizing-addon3">ProductDescribe</div>
-        <input type="text" class="form-control" placeholder="" aria-describedby="sizing-addon3" name="describe">
-      	</div>
-      	<div class="input-group input-group-sm">
-        <div class="input-group-addon" id="sizing-addon3">Attached Image</div>
-        <input type="text" class="form-control" placeholder="" aria-describedby="sizing-addon3" name="img-f">
-      	</div>
-      	<div class="input-group input-group-sm">
-        <div class="input-group-addon" id="sizing-addon3">Product class I Catalog</div>
-        <input type="cheackbox" class="form-control" placeholder="" aria-describedby="sizing-addon3" name="typeFirst" value="hot">
-		
-      	</div> -->
       	<div class="list">
 	        <div>ProductName</div>
 	        <input type="text" name="title">
@@ -99,19 +92,34 @@
       		<div>Product class I Catalog</div>
 	      	<div class="dongtai">
 	        	
-			</div>
-			<button class="addFirst">add class I Catalog</button>
-			<input type="text" name="addFirst" style="display: none;">
-			<div class="special">Product class II Catalog</div>
+			    </div>
+			    
+          <div class="special">Product class II Catalog</div>
       	</div>
       	<div class="list">
       		<div class="dongtaier">     	
-			</div>
-			<button class="addSecond">add class II Catalog</button>
-			<input type="text" name="addSecond" style="display: none;">
+			    </div>
+    			
       	</div>
       	<button class="submit">submit</button>
+        <div class="uploading" style="display: none;">
+          <span>uploading...</span>
+        </div>
+        <div class="addtype" style="margin-top: 30px;">
+          <span class="addFirst">add class I Catalog</span>
+          <input type="text" name="addFirst" style="margin: 20px;">
+          <br/>
+          <span class="addSecond">add class II Catalog</span>
+          <input type="text" name="addSecond"  style="margin: 20px;">
+          <br/>
+          <button class="add">add Catalog</button>
+        </div>
   </div>
+
+
+
+
+
   <div class="contact">
       <div>
        <span>No.2-3 BAIYU MOUNTAIN VILLA, JIAOJIANG, TAIZHOU, ZHEJIANG, CHINA, 318000</span>
@@ -124,7 +132,8 @@
       </div>
     </div>      
 <script src="../js/jquery.js"></script>
-<script src="../bootstrap/js/bootstrap.js"></script>    
+<script src="../bootstrap/js/bootstrap.js"></script>   
+<script src="../js/lodash.js"></script>   
 <script src="../js/index.js"></script>
 <script src="../js/add.js"></script>
 </body>

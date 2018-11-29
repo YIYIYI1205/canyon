@@ -14,7 +14,9 @@ else{html.push("<span class=\"num\"><a href=\"javascript:;\" page="+i+">"+(i+1)+
 html.push("<span class=\"dots\">...</span>");html.push("<span class=\"num\"><a href=\"javascript:;\" page ="+(pageCount-1)+">"+pageCount+"</a></span>");}
 if(pageIndex<pageCount-1){html.push("<span class=\"next\"><a href=\"javascript:;\" page="+(pageIndex+1)+" data-rec=\"下一页\"></a></span>");}
 else{html.push("<span class=\"disable next\"></span>");}
-html.push("<span class=\"total total_page\">total pages:"+pageCount+"</span>");html.push("<span class=\"page_jump\">to</span><input id='pageInput' class='pageInput' oldpage='' maxlength='"+pageCount+"' type='text' ><span class=\"page_jump\">pages</span><button type='button' id='pagebtn' class='pagebtn'>ok</button>");return html.join("");},bindListener:function(obj,callback,topFlag){var topFlag=topFlag||true;obj.on("click","a",function(){if(typeof callback==="function"){var index=$(this).attr("page");callback(parseInt(index));}
+html.push("<span class=\"total total_page\">total pages:"+pageCount+"</span>");
+html.push("<span class=\"page_jump\">to</span><input id='pageInput' class='pageInput' oldpage='' maxlength='"+pageCount+"' type='text' ><span class=\"page_jump\">pages</span><button type='button' id='pagebtn' class='pagebtn'>ok</button>");
+return html.join("");},bindListener:function(obj,callback,topFlag){var topFlag=topFlag||true;obj.on("click","a",function(){if(typeof callback==="function"){var index=$(this).attr("page");callback(parseInt(index));}
 if(topFlag){$(window).scrollTop(0);}
 return false;});obj.on("click","button",function(){var pageInput=obj.find('input');if(typeof callback==="function"){var index=pageInput.val();if(index==''){pageInput.focus();return false;}
 callback(parseInt(index)-1);}

@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="../css/common.css">
   <link rel="stylesheet" href="../css/guestBookOption.css">
+  <link rel="stylesheet" href="../css/pagination.css">
 </head>
 <body>
 	<div class="head">
@@ -19,31 +20,7 @@
             <li class="product_guide">
               <a href="#" id="product">Prouducts</a>
               <ul class="first_guide" style="display: none;">
-                <li class="qita yiji hot" onclick="product('hot')">hot</li>
-              <!-- <ul class="first_guide"> -->
-                <!-- <li class="qita yiji" onclick="product('hot')">hot</li>
-                <li class="relative_guide beach yiji" onclick="product('beach_shorts')">
-                  beach shorts
-                  <ul class="second_guide beach_shorts_guide" style="display: none;">
-                    <li class="erji" onclick="product('men')">men's shorts</li>
-                    <li class="erji" onclick="product('women')">women's shorts</li>
-                    <li class="erji" onclick="product('kids')">kids shorts</li>
-                  </ul>
-                </li>
-                <li class="relative_guide sports yiji" onclick="product('sports_wears')">
-                  sports wears
-                  <ul  class="second_guide sports_wears_guide" style="display: none;">
-                    <li class="erji" onclick="product('MMA')">MMA shorts</li>
-                    <li class="erji" onclick="product('boxing')">boxing shorts</li>
-                    <li class="erji" onclick="product('track')">track suits</li>
-                    <li class="erji" onclick="product('TKD')">TKD uniform</li>
-                    <li class="erji" onclick="product('compressions')">compressions</li>
-                  </ul>
-                </li>
-                <li class="qita yiji" onclick="product('pants')">pants</li>
-                <li class="qita yiji" onclick="product('swimming_wears')">swimming wears</li>
-                <li class="qita yiji" onclick="product('knit_wears')">knit wears</li>
-                <li class="qita yiji" onclick="product('others')">others</li> -->
+            
               </ul>
             </li>
             <li><a href="#" id="guest_book" class="hideQita" onclick="guest()">Guest book</a></li>
@@ -61,17 +38,15 @@
       </div>
   </div>
   <div class="content">
-    
-      <!-- <div class="title">
-        <div class="one">guest Book</div>
-        <div class="two">option</div>
-        <div class="three">state</div>
-      </div> -->
-      
       <div class="noData" style="margin: 230px 0;display: none;">
         <h2>no data</h2>
       </div>
-      
+      <div class="guestList">
+            
+      </div>
+      <div class="ht-page">
+      </div>
+
   </div>
   <div class="contact">
       <div>
@@ -85,8 +60,9 @@
       </div>
   </div>
   <script src="../js/jquery.js"></script>
+  <script src="../js/pagination.js"></script>
   <script src="../bootstrap/js/bootstrap.js"></script>    
-<script src="../js/index.js"></script>
+  <script src="../js/index.js"></script>
 <script src="../js/guestBookOption.js"></script>
 </body>
 </html>

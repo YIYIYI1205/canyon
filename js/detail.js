@@ -6,10 +6,9 @@ $(function(){
     var img_f = storage["img_f"];
     var title_f = storage["title_f"];
     describe=describe.split(",");
-    console.log(describe);
     $(".title").text(title);
     //没有附图
-    if(img_f==""){
+    if(img_f==undefined){
         $(".single").attr("src",img);
     }else{
         $(".single").attr("style","display:none;");
@@ -20,7 +19,6 @@ $(function(){
         $(".second-slide").attr("src",img_f);
         $(".two").attr("src",img_f);
     }
-    // $(".describe").text(describe);
     for(var i=0;i<describe.length;i++){
         var h4=$("<h4></h4>").text(describe[i]);
         $(".describe").append(h4);

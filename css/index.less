@@ -29,12 +29,11 @@
 		}
 	}
 }
-
+h1{
+	text-align:center;
+}
 .product{
 	margin: 20px 50px;
-	h1{
-		text-align:center;
-	}
 	.detail{
 		margin-top: 20px;
 		display: flex;
@@ -45,6 +44,20 @@
 				width: 100%;
 				height: 100%;
 			}
+			h1{
+				margin-top: 20%;
+				font-family:"Times New Roman";
+				display: inline-block;
+				text-decoration: underline;
+			}
+			.jump{
+				text-decoration: underline;
+				margin-left: 20px;
+				font-size: 2.5rem;
+			}
+			.jump:hover{
+				color: #27aae0;
+			}
 		}
 		.right{
 			flex: 1;
@@ -52,13 +65,42 @@
 				width: 80%;
 				height: auto;
 			}
+			h1{
+				margin-top: 20%;
+				font-family:"Times New Roman";
+				display: inline-block;
+				text-decoration: underline;
+			}
+			.jump{
+				text-decoration: underline;
+				margin-left: 20px;
+				font-size: 2.5rem;
+			}
+			.jump:hover{
+				color: #27aae0;
+			}
 		}
 	}
 }
 .team{
 	display: flex;
-	margin: 50px;
+	margin: 0 50px 50px 50px;
 	position:relative;
+	h1{
+		margin-top: 10%;
+		text-align:center;
+		display: inline-block;
+		font-size: 2.8em;
+		text-decoration: underline;
+	}
+	.jump{
+		text-decoration: underline;
+		margin-left: 5px;
+		font-size: 2.5rem;
+	}
+	.jump:hover{
+		color: #27aae0;
+	}
 	.border{
 		height: 1.5%;
 		width: 45%;
@@ -79,7 +121,7 @@
 		}
 	}
 	.right{
-		flex: 2;
+		flex: 1;
 		width: 50%;
 		height: 50%;
 		img{
@@ -88,4 +130,34 @@
 			height: auto;
 		}
 	}
+}
+@keyframes myfirst
+{
+0%   {top: 100%;left:50%;margin-left: -200px;opacity: 0;}
+100%  {top: 60%;left:50%;margin-left: -200px;opacity: 1;}
+}
+/* Firefox */
+@-moz-keyframes myfirst 
+{
+0%   {top: 100%;left:50%;margin-left: -200px;opacity: 0;}
+100%  {top: 60%;left:50%;margin-left: -200px;opacity: 1;}
+}
+/* Safari 和 Chrome */
+@-webkit-keyframes myfirst 
+{
+0%   {top: 100%;left:50%;margin-left: -200px;opacity: 0;}
+100%  {top: 60%;left:50%;margin-left: -200px;opacity: 1;}
+}
+/* Opera */
+@-o-keyframes myfirst 
+{
+0%   {top: 100%;left:50%;margin-left: -200px;opacity: 0;}
+100%  {top: 60%;left:50%;margin-left: -200px;opacity: 1;}
+}
+
+.postion{
+animation: myfirst 2s;
+-moz-animation: myfirst 2s;	/* Firefox */
+-webkit-animation: myfirst 2s;	/* Safari 和 Chrome */
+-o-animation: myfirst 2s;	/* Opera */
 }
